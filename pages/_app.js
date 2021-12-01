@@ -1,27 +1,30 @@
-import 'nextra-theme-blog/style.css'
+import '../styles/main.css'
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
+
 import Head from 'next/head'
 
-import '../styles/main.css'
-
-export default function Nextra({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <title>Steph-vs-Reggie</title>
         <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="RSS"
-          href="/feed.xml"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Inter-roman.latin.var.woff2"
-          as="font"
-          type="font/woff2"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossOrigin="anonymous"
         />
       </Head>
-      <Component {...pageProps} />
+      <div className="container">
+        <Nav />
+        <main className="main">
+          <Component {...pageProps} />
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }
+
+export default MyApp

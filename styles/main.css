@@ -1,65 +1,48 @@
-@font-face {
-  font-family: 'Inter var';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: block;
-  src: url(/fonts/Inter-roman.latin.var.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Inter var';
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: block;
-  src: url(/fonts/Inter-italic.latin.var.woff2) format('woff2');
-  font-named-instance: 'Italic';
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 body {
-  font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-feature-settings: 'case' 1, 'cpsp' 1, 'dlig' 1, 'cv01' 1, 'cv02',
-    'cv03' 1, 'cv04' 1;
-  font-variation-settings: 'wght' 450;
-  font-variant: common-ligatures contextual;
-  letter-spacing: -0.02em;
+  font-family: 'Lato', Helvetica, Avenir, Ariel, sans-serif;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 830px;
 }
-b,
-strong,
-h3,
-h4,
-h5,
-h6 {
-  font-variation-settings: 'wght' 650;
+* {
+  box-sizing: border-box;
 }
-h1 {
-  font-variation-settings: 'wght' 850;
+.main {
+  background: url('/images/bg2.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 90% 90%;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
-h2 {
-  font-variation-settings: 'wght' 750;
-}
-
-@media screen and (min-device-pixel-ratio: 1.5),
-  screen and (min-resolution: 1.5dppx) {
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-}
-
-details summary {
+.cursor {
   cursor: pointer;
 }
-
-img.next-image {
-  margin: 0;
+a {
+  cursor: pointer;
+  color: #0070f3;
+  text-decoration: none;
+  margin-right: 1em;
 }
-
-.prose a {
-  color: #0074de;
+a:hover {
+  color: #0b15a5;
+  text-decoration: underline;
 }
-
-.nav-line .nav-link {
-  color: #69778c;
+p {
+  max-width: 70ch;
+}
+.navbar {
+  padding: 0.2em 0;
+}
+.logo {
+  font-size: 24pt;
+  font-variant-caps: small-caps;
+}
+.bold {
+  font-weight: 800;
+}
+footer {
+  margin: 0 auto;
 }
